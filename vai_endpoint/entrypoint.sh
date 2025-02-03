@@ -27,7 +27,7 @@ fi
 
 ldconfig 2>/dev/null || echo 'unable to refresh ld cache, not a big deal in most cases'
 
-export AIP_PREDICT_ROUTE="/predict"
-export AIP_HEALTH_ROUTE="/aiphealth"
+unset AIP_PREDICT_ROUTE
+unset AIP_HEALTH_ROUTE
 
 exec text-generation-launcher $@
